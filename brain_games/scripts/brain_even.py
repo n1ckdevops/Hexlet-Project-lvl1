@@ -3,43 +3,33 @@ from random import randint
 
 
 def is_brain_even():
-    correct_answer = "yes"
-    wrong_answer = "no"
+    print('Answer "yes" if the number is even, otherwise answer "no"')
     i = 0
-    while i < 3:
-
+    while i != 3:
         random_number = randint(1, 50)
-        print('Answer "yes" if the number is even, otherwise answer "no"')
-        question = f"Question: {random_number}"
-        print(question)
+        print(f"Question: {random_number}")
         answer = prompt.string("Your answer: ")
+        nothing = "yes" if answer == "no" else "no"
         if answer == 'yes' and random_number % 2 == 0:
             print('Correct!')
-
+            i += 1
         elif answer == 'no' and random_number % 2 != 0:
             print("Correct!")
-
+            i += 1
         elif answer == 'yes' and random_number % 2 != 0:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was {wrong_answer}.\n"
-                  f"Let's try again,\n"
-                  f"                ")
-
-        elif answer == 'no' and random_number % 2 == 0:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was {correct_answer}.\n"
-                  f"Let's try again,\n"
-                  f"                ")
-
+            print(f"'{answer}' is wrong answer ;(. "
+                  f"Correct answer was {nothing}.\nLet's try again,\n")
+            i *= 0
         elif answer and random_number % 2 == 0:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was {correct_answer}.\n"
+            print(f"'{answer}' is wrong answer ;(. Correct answer was yes.\n"
                   f"Let's try again,\n"
                   f"                ")
-
+            i *= 0
         elif answer and random_number % 2 != 0:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was {wrong_answer}.\n"
+            print(f"'{answer}' is wrong answer ;(. Correct answer was no.\n"
                   f"Let's try again,\n"
                   f"                ")
-
-    print("Congratulations, Bill!")
+    print("Congratulations, !")
 
 
 is_brain_even()
