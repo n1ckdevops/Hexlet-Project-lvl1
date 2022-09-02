@@ -3,6 +3,7 @@ from random import randint
 
 
 def is_brain_even():
+    # name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no"')
     i = 0
     while i != 3:
@@ -20,15 +21,18 @@ def is_brain_even():
             print(f"'{answer}' is wrong answer ;(. "
                   f"Correct answer was {nothing}.\nLet's try again,\n")
             i *= 0
+            return
         elif answer and random_number % 2 == 0:
             print(f"'{answer}' is wrong answer ;(. Correct answer was yes.\n"
                   f"Let's try again,\n"
                   f"                ")
             i *= 0
+            return
         elif answer and random_number % 2 != 0:
             print(f"'{answer}' is wrong answer ;(. Correct answer was no.\n"
                   f"Let's try again,\n"
                   f"                ")
+            return
     print("Congratulations, !")
 
 
