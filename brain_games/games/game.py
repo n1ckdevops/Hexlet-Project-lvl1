@@ -3,11 +3,12 @@ from random import randint
 
 
 def welcome_user():
+    print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
 
 
-def is_even():
+def is_even() -> object:
 
     print('Answer "yes" if the number is even, otherwise answer "no"')
     i = 0
