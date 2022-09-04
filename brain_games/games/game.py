@@ -3,15 +3,22 @@ from random import randint
 
 
 def welcome_user():
-
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
     return name
 
 
-def is_even() -> object:
+def win_phrase(ans, name):
+    if ans == 'Correct!':
+        return print(f"Congratulations, {name}!")
+    else:
+        pass
 
+
+def is_even() -> object:
+    name = welcome_user()
+    ans = 'Correct!'
     print('Answer "yes" if the number is even, otherwise answer "no"')
     i = 0
     while i != 3:
@@ -20,28 +27,16 @@ def is_even() -> object:
         answer = prompt.string("Your answer: ")
         nothing = "yes" if answer == "no" else "no"
         if answer == 'yes' and random_number % 2 == 0:
-            print('Correct!')
+            print(ans)
             i += 1
         elif answer == 'no' and random_number % 2 != 0:
-            print("Correct!")
+            print(ans)
             i += 1
-        elif answer == 'yes' and random_number % 2 != 0:
+        else:
             print(f"'{answer}' is wrong answer ;(. "
-                  f"Correct answer was {nothing}.\nLet's try again,\n")
-            i *= 0
+                  f"Correct answer was {nothing}.\nLet's try again, {name}.")
             return
-        elif answer and random_number % 2 == 0:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was yes.\n"
-                  f"Let's try again,\n"
-                  f"                ")
-            i *= 0
-            return
-        elif answer and random_number % 2 != 0:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was no.\n"
-                  f"Let's try again,\n"
-                  f"                ")
-            return
-    print("Congratulations, !")
+    win_phrase(ans, name)
 
 
 is_even()
