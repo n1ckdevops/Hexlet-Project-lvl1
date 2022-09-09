@@ -1,6 +1,7 @@
 import random
 from random import randint
 import prompt
+import math
 
 
 def welcome_user():
@@ -83,4 +84,32 @@ def calc():
 Correct answer was {correct_reply}.\nLet's try again, {name}.'"
             print(ans)
             i = 3
+    win_phrase(ans, name)
+
+
+def gcd():
+    name = welcome_user()
+    print('Find the greatest common divisor of given numbers.')
+
+    i = 0
+    while i != 3:
+        random_1 = randint(10, 50)
+        random_2 = randint(10, 50)
+        correct_reply = math.gcd(random_1, random_2)
+        print(f"Question: {random_1} {random_2}")
+        answer = prompt.string("Your answer: ")
+        if answer == correct_reply:
+            ans = 'Correct!'
+            print(ans)
+            i += 1
+        elif answer != correct_reply:
+            ans = f"'{answer}' is wrong answer ;(.\
+Correct answer was {correct_reply}.\nLet's try again, {name}.'"
+            print(ans)
+            break
+        else:
+            ans = f"'{answer}' is wrong answer ;(.\
+            Correct answer was {correct_reply}.\nLet's try again, {name}.'"
+            print(ans)
+            break
     win_phrase(ans, name)
