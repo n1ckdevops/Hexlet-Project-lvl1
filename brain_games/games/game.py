@@ -93,23 +93,20 @@ def gcd():
 
     i = 0
     while i != 3:
-        random_1 = randint(10, 50)
-        random_2 = randint(10, 50)
+        random_1 = randint(10, 20)
+        random_2 = randint(10, 20)
         correct_reply = math.gcd(random_1, random_2)
         print(f"Question: {random_1} {random_2}")
-        answer = prompt.string("Your answer: ")
+        answer = int(prompt.string("Your answer: "))
         if answer == correct_reply:
             ans = 'Correct!'
             print(ans)
             i += 1
-        elif answer != correct_reply:
+        else:
             ans = f"'{answer}' is wrong answer ;(.\
 Correct answer was {correct_reply}.\nLet's try again, {name}.'"
             print(ans)
             break
-        else:
-            ans = f"'{answer}' is wrong answer ;(.\
-            Correct answer was {correct_reply}.\nLet's try again, {name}.'"
-            print(ans)
-            break
+
     win_phrase(ans, name)
+
