@@ -1,5 +1,5 @@
 import random
-from random import randint
+from random import randint, choice
 import prompt
 import math
 
@@ -33,6 +33,7 @@ def correct_answer(random_1, random_2, exp):
 def is_even():
     name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no"')
+    ans = "Correct!"
     i = 0
     while i != 3:
         random_number = randint(1, 50)
@@ -49,7 +50,7 @@ def is_even():
             i += 1
         else:
             ans = f"'{answer}' is wrong answer ;(.\
-Correct answer was {nothing}.\nLet's try again, {name}.'"
+Correct answer was {nothing}.\nLet's try again, {name}."
             print(ans)
             i = 3
 
@@ -60,6 +61,7 @@ def calc():
     name = welcome_user()
     print('What is the result of the expression?')
     i = 0
+    ans = "Correct!"
     while i != 3:
         random_1 = randint(31, 50)
         random_2 = randint(1, 10)
@@ -80,8 +82,8 @@ def calc():
             print(ans)
             i += 1
         else:
-            ans = f"'{answer}' is wrong answer ;(.\
-Correct answer was {correct_reply}.\nLet's try again, {name}.'"
+            ans = f"'{answer}' is wrong answer ;(. \
+Correct answer was {correct_reply}.\nLet's try again, {name}."
             print(ans)
             i = 3
     win_phrase(ans, name)
@@ -90,7 +92,7 @@ Correct answer was {correct_reply}.\nLet's try again, {name}.'"
 def gcd():
     name = welcome_user()
     print('Find the greatest common divisor of given numbers.')
-
+    ans = "Correct!"
     i = 0
     while i != 3:
         random_1 = randint(10, 20)
@@ -103,10 +105,51 @@ def gcd():
             print(ans)
             i += 1
         else:
-            ans = f"'{answer}' is wrong answer ;(.\
-Correct answer was {correct_reply}.\nLet's try again, {name}.'"
+            ans = f"'{answer}' is wrong answer ;(. \
+Correct answer was {correct_reply}.\nLet's try again, {name}."
             print(ans)
             break
 
     win_phrase(ans, name)
 
+
+def progression():
+
+    name = welcome_user()
+
+    print('What number is missing in the progression?')
+
+    counter = 0
+    max_win = 3
+    ans = "Correct!"
+    while counter < max_win:
+        prg_list = []
+        start = randint(1, 10)
+
+        step = randint(2, 7)
+
+        stop_num = randint(6, 10)
+
+        stop = start + (step * stop_num)
+        for i in range(start, stop, step):
+            prg_list.append(i)
+        correct_reply = choice(prg_list)
+
+        correct_index = prg_list.index(correct_reply)
+
+        prg_list[correct_index] = ".."
+        final_cut_prg = " ".join(map(str, prg_list))
+        q = f"Question: {final_cut_prg}"
+        print(q)
+        answer = input("Your answer: ")
+        if str(answer) == str(correct_reply):
+            ans = 'Correct!'
+            print(ans)
+            counter += 1
+        else:
+            ans = f"'{answer}' is wrong answer ;(. \
+Correct answer was {correct_reply}.\nLet's try again, {name}."
+            print(ans)
+            counter = 3
+    win_phrase(ans, name)
+    # return correct_reply, final_cut_prg
