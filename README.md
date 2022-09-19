@@ -5,3 +5,4 @@
 BRAIN-EVEN <a href="https://asciinema.org/a/519598" target="_blank"><img src="https://asciinema.org/a/519598.svg" /></a>
 BRAIN-CALC <a href="https://asciinema.org/a/519601" target="_blank"><img src="https://asciinema.org/a/519601.svg" /></a>
 BRAIN-HCF/GCD <a href="https://asciinema.org/a/519928" target="_blank"><img src="https://asciinema.org/a/519928.svg" /></a>
+BRAIN-PROHGRESSION <a href="https://asciinema.org/a/522416" target="_blank"><img src="https://asciinema.org/a/522416.svg" /></a>
