@@ -2,7 +2,7 @@ import random
 from random import randint, choice
 import prompt
 import math
-import sympy
+from sympy import isprime
 
 
 def welcome_user():
@@ -149,7 +149,7 @@ def is_prime():
     counter = 0
     while counter != 3:
         random_num = random.randint(3, 30)
-        prime = sympy.isprime(random_num)
+        prime = isprime(random_num)
         q = f"Question: {random_num}"
         print(q)
         answer = input("Your answer: ")
