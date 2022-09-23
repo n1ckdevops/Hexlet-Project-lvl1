@@ -2,6 +2,7 @@ import random
 from random import randint, choice
 import prompt
 import math
+import sympy
 
 
 def welcome_user():
@@ -114,7 +115,6 @@ Correct answer was {correct_reply}.\nLet's try again, {name}."
 
 
 def progression():
-
     name = welcome_user()
 
     print('What number is missing in the progression?')
@@ -152,4 +152,29 @@ Correct answer was {correct_reply}.\nLet's try again, {name}."
             print(ans)
             counter = 3
     win_phrase(ans, name)
-    # return correct_reply, final_cut_prg
+
+
+def is_prime():
+    name = welcome_user()
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+    ans = "Correct!"
+    counter = 0
+    while counter != 3:
+        random_num = random.randint(3, 30)
+        prime = sympy.isprime(random_num)
+        q = f"Question: {random_num}"
+        print(q)
+        answer = input("Your answer: ")
+        curr_reply = "yes" if answer == "no" else "no"
+        if (answer == "yes") and prime:
+            print(ans)
+            counter += 1
+        elif (answer == "no") and not prime:
+            print(ans)
+            counter += 1
+        else:
+            ans = f"'{answer}' is wrong answer ;(. \
+Correct answer was {curr_reply}.\nLet's try again, {name}."
+            print(ans)
+            counter = 3
+    win_phrase(ans, name)
