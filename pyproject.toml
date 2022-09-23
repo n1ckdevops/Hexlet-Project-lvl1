@@ -1,11 +1,15 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "five mathy brain games"
+authors = ["Nick <muyyzdali@gmail.com>"]
 packages = [
   { include = "brain_games" },
 ]
+repository = "https://github.com/n1ckdevops/python-project-49"
+
+
+
 
 [tool.poetry.dependencies]
 python = ">=3.6.1"
@@ -26,3 +30,5 @@ brain-prime = 'brain_games.scripts.brain_prime:main'
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+

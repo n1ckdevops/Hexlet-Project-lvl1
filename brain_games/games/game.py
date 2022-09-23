@@ -42,11 +42,9 @@ def is_even():
         answer = prompt.string("Your answer: ")
         nothing = "yes" if answer == "no" else "no"
         if answer == 'yes' and random_number % 2 == 0:
-            ans = 'Correct!'
             print(ans)
             i += 1
         elif answer == 'no' and random_number % 2 != 0:
-            ans = 'Correct!'
             print(ans)
             i += 1
         else:
@@ -54,7 +52,6 @@ def is_even():
 Correct answer was {nothing}.\nLet's try again, {name}."
             print(ans)
             i = 3
-
     win_phrase(ans, name)
 
 
@@ -71,15 +68,12 @@ def calc():
         print(f"Question: {random_1} {exp} {random_2}")
         answer = prompt.string("Your answer: ")
         if exp == "-" and answer == str(random_1 - random_2):
-            ans = 'Correct!'
             print(ans)
             i += 1
         elif exp == "+" and answer == str(random_1 + random_2):
-            ans = 'Correct!'
             print(ans)
             i += 1
         elif exp == "*" and answer == str(random_1 * random_2):
-            ans = 'Correct!'
             print(ans)
             i += 1
         else:
@@ -102,7 +96,6 @@ def gcd():
         print(f"Question: {random_1} {random_2}")
         answer = int(prompt.string("Your answer: "))
         if answer == correct_reply:
-            ans = 'Correct!'
             print(ans)
             i += 1
         else:
@@ -125,18 +118,13 @@ def progression():
     while counter < max_win:
         prg_list = []
         start = randint(1, 10)
-
         step = randint(2, 7)
-
         stop_num = randint(6, 10)
-
         stop = start + (step * stop_num)
         for i in range(start, stop, step):
             prg_list.append(i)
         correct_reply = choice(prg_list)
-
         correct_index = prg_list.index(correct_reply)
-
         prg_list[correct_index] = ".."
         final_cut_prg = " ".join(map(str, prg_list))
         q = f"Question: {final_cut_prg}"
