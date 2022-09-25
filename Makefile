@@ -12,3 +12,4 @@ inst:
 	python3 -m pip install --upgrade --force-reinstall dist/*.whl
 make lint:
 	poetry run flake8 brain_games
+
