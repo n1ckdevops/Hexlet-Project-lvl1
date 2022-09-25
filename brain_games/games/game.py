@@ -33,7 +33,7 @@ def correct_answer(random_1, random_2, exp):
 
 def is_even():
     name = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no"')
+    print('Answer "yes" if the number is even, otherwise answer "no".')
     ans = "Correct!"
     i = 0
     while i != 3:
@@ -109,7 +109,6 @@ Correct answer was {correct_reply}.\nLet's try again, {name}."
 
 def progression():
     name = welcome_user()
-
     print('What number is missing in the progression?')
 
     counter = 0
