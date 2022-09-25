@@ -38,7 +38,7 @@ def is_even():
     i = 0
     while i != 3:
         random_number = randint(1, 50)
-        print("Question: " + str(random_number))
+        print(f"Question: {random_number}")
         answer = prompt.string("Your answer: ")
         nothing = "yes" if answer == "no" else "no"
         if answer == 'yes' and random_number % 2 == 0:
