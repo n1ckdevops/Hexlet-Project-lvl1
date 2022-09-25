@@ -12,8 +12,9 @@ repository = "https://github.com/n1ckdevops/python-project-49"
 
 
 [tool.poetry.dependencies]
-python = ">=3.6.1"
+python = ">=3.8"
 prompt = "^0.4.1"
+sympy = "^1.11.1"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^5.0.4"
