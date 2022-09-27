@@ -48,7 +48,7 @@ def is_even():
             i += 1
         else:
             ans = f"'{answer}' is wrong answer ;(. \
-Correct answer was {nothing}.\nLet's try again, {name}."
+Correct answer was {nothing}.\nLet's try again, {name}!"
             print(ans)
             i = 3
     win_phrase(ans, name)
@@ -77,7 +77,7 @@ def calc():
             i += 1
         else:
             ans = f"'{answer}' is wrong answer ;(. \
-Correct answer was {correct_reply}.\nLet's try again, {name}."
+Correct answer was {correct_reply}.\nLet's try again, {name}!"
             print(ans)
             i = 3
     win_phrase(ans, name)
@@ -99,7 +99,7 @@ def gcd():
             i += 1
         else:
             ans = f"'{answer}' is wrong answer ;(. \
-Correct answer was {correct_reply}.\nLet's try again, {name}."
+Correct answer was {correct_reply}.\nLet's try again, {name}!"
             print(ans)
             break
 
@@ -134,7 +134,7 @@ def progression():
             counter += 1
         else:
             ans = f"'{answer}' is wrong answer ;(. \
-Correct answer was {correct_reply}.\nLet's try again, {name}."
+Correct answer was {correct_reply}.\nLet's try again, {name}!"
             print(ans)
             counter = 3
     win_phrase(ans, name)
@@ -166,7 +166,7 @@ def is_prime():
             counter += 1
         else:
             ans = f"'{answer}' is wrong answer ;(. \
-Correct answer was {curr_reply}.\nLet's try again, {name}."
+Correct answer was {curr_reply}.\nLet's try again, {name}!"
             print(ans)
             counter = 3
 
