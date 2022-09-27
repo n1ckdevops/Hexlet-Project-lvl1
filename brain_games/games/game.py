@@ -2,7 +2,6 @@ import random
 from random import randint, choice
 import prompt
 import math
-from sympy import isprime
 
 
 def welcome_user():
@@ -141,22 +140,28 @@ Correct answer was {correct_reply}.\nLet's try again, {name}."
     win_phrase(ans, name)
 
 
+def p(x):
+    for i in range(2, int(x ** 0.5) + 1):
+        if x % i == 0:
+            return False
+    return True
+
+
 def is_prime():
     name = welcome_user()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     ans = "Correct!"
     counter = 0
     while counter != 3:
-        random_num = random.randint(3, 30)
-        prime = isprime(random_num)
+        random_num = randint(1, 30)
         q = f"Question: {random_num}"
         print(q)
         answer = input("Your answer: ")
         curr_reply = "yes" if answer == "no" else "no"
-        if (answer == "yes") and prime:
+        if (answer == "yes") and p(random_num):
             print(ans)
             counter += 1
-        elif (answer == "no") and not prime:
+        elif (answer == "no") and not p(random_num):
             print(ans)
             counter += 1
         else:
@@ -164,4 +169,5 @@ def is_prime():
 Correct answer was {curr_reply}.\nLet's try again, {name}."
             print(ans)
             counter = 3
+
     win_phrase(ans, name)
