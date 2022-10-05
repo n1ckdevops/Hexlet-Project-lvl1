@@ -1,3 +1,5 @@
+from typing import Any
+
 import prompt
 from brain_games.cli import welcome_user
 
@@ -11,7 +13,7 @@ def set_out(lets_play) -> None:
     while attempts != 3:
         question, correct_answer = lets_play.game_settings()
         print(question)
-        player_answer = prompt.string("Answer: ")
+        player_answer: str = prompt.string("Answer: ")
         attempts += 1
         if player_answer == correct_answer:
             print("Correct!")
