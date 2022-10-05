@@ -2,14 +2,14 @@ import prompt
 from brain_games.cli import welcome_user
 
 
-def set_out(lets_play) -> None:
+def set_out(module) -> None:
     # WELCOME LINES
     player_name: str = welcome_user()
-    print(lets_play.GAME_MESSAGE)
+    print(module.GAME_MESSAGE)
     # SETTING OUT THE GAME
     attempts = 0
     while attempts != 3:
-        question, correct_answer = lets_play.game_settings()
+        question, correct_answer = module.game_settings()
         print(question)
         player_answer = prompt.string("Answer: ")
         attempts += 1
