@@ -6,7 +6,7 @@ MAX_NUMBER = 10
 OPERATORS = ["+", "-", "*"]
 
 
-def game_start():
+def game_settings():
     """
     - return question and correct answer
     """
