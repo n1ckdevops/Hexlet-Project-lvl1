@@ -1,20 +1,11 @@
 from random import randint, randrange
 
-<<<<<<< HEAD
-GAME_MESSAGE: str = "What number is missing in this progression?"
+GAME_MESSAGE: str = "What number is missing in the progression?"
 NUM_OF_ITERATIONS: int = 10
 MIN_START: int = 1
 MAX_START: int = 100
 MIN_INC: int = 1
 MAX_INC: int = 5
-=======
-GAME_MESSAGE = "What number is missing in this progression?"
-MIN_INCR = 1
-MAX_INCR = 5
-ITERATIONS = 10
-MIN_START = 1
-MAX_START = 100
->>>>>>> 050d9db5d7c6b0361a87a26214c5cfb5f8184630
 
 
 def game_settings() -> tuple:
