@@ -2,7 +2,7 @@ import prompt
 from brain_games.cli import welcome_user
 
 
-def set_out(module) -> None:
+def set_out(module):
     # WELCOME LINES
     player_name: str = welcome_user()
     print(module.GAME_MESSAGE)
@@ -17,6 +17,6 @@ def set_out(module) -> None:
             print("Correct!")
         else:
             print(f"{player_answer} is wrong answer ;(. Correct "
-                  f"answer is {correct_answer}")
+                  f"answer was {correct_answer}")
             print(f"Let's try again, {player_name}!")
     print(f"Congratulations, {player_name}!")
