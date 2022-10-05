@@ -1,19 +1,18 @@
-<<<<<<< HEAD
+.idea/
 .venv
 .vscode
 __pycache__
-.idea
-.DS_Store
-dist
-=======
-*.egg-info
-.__pycache__
-.dist/
-*.pyc
-.venv/
+dist/
 .coverage
 coverage.xml
 .pytest_cache/
 .vim
->>>>>>> d2ac4510de55bd7a3190ffd7809809e24cd57ee2
-/dist/
+.DS_Store
+
+# brain games
+brain-calc
+brain-even
+brain-games
+brain-gcd
+brain-prime
+brain-progression
