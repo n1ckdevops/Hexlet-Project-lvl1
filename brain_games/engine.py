@@ -9,6 +9,7 @@ def set_out(module):
     # SETTING OUT THE GAME
     attempts = 0
     while attempts != 3:
+        question: str
         question, correct_answer = module.game_settings()
         print(question)
         player_answer = prompt.string("Answer: ")
