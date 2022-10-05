@@ -106,6 +106,13 @@ Correct answer was {correct_reply}.\nLet's try again, {name}!"
     win_phrase(ans, name)
 
 
+def p(x):
+    for i in range(2, int(x ** 0.5) + 1):
+        if x % i == 0:
+            return False
+    return True
+
+
 def progression():
     name = welcome_user()
     print('What number is missing in the progression?')
@@ -138,13 +145,6 @@ Correct answer was {correct_reply}.\nLet's try again, {name}!"
             print(ans)
             counter = 3
     win_phrase(ans, name)
-
-
-def p(x):
-    for i in range(2, int(x ** 0.5) + 1):
-        if x % i == 0:
-            return False
-    return True
 
 
 def is_prime():

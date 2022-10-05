@@ -2,7 +2,7 @@ install:
 	poetry install
 brain-games:
 	poetry run brain-games
-build:
+git build:
 	poetry build
 publish:
 	poetry publish --dry-run

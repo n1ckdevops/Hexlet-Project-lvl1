@@ -2,7 +2,10 @@
 name = "hexlet-code"
 version = "0.1.0"
 description = "five mathy brain games"
-authors = ["Nick <muyyzdali@gmail.com>"]
+classifiers = [
+  "Topic :: Games/Entertainment"
+  ]
+authors = ["Nick Kuchinsky <muyyzdali@gmail.com>"]
 packages = [
   { include = "brain_games" },
 ]
