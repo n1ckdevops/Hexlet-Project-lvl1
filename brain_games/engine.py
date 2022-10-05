@@ -19,4 +19,4 @@ def set_out(lets_play) -> None:
             print(f"{player_answer} is wrong answer ;(. Correct "
                   f"answer is {correct_answer}")
             print(f"Let's try again, {player_name}!")
-    print(f"Congratulations, {player_name}")
+    print(f"Congratulations, {player_name}!")
