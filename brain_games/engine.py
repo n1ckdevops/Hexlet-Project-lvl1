@@ -19,4 +19,5 @@ def set_out(module):
             print(f"{player_answer} is wrong answer ;(. Correct "
                   f"answer was {correct_answer}")
             print(f"Let's try again, {player_name}!")
+            attempts = 3
     print(f"Congratulations, {player_name}!")
