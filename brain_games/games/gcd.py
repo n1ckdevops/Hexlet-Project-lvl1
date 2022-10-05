@@ -14,4 +14,4 @@ def game_settings():
     second_random = randint(MIN_NUMBER, MAX_NUMBER)
     divisor = gcd(first_random, second_random)
     question = f"Question: {first_random} {second_random}"
-    return divisor, question
+    return str(divisor), question
