@@ -1,6 +1,6 @@
 from random import randint, randrange
 
-GAME_MESSAGE = "What number is missing in the progression?"
+GAME_MESSAGE = "What number is missing in this progression?"
 MIN_INCR = 1
 MAX_INCR = 5
 ITERATIONS = 10
