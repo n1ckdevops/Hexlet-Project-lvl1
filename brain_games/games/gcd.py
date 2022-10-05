@@ -1,9 +1,9 @@
 from math import gcd
 from random import randint
 
-GAME_MESSAGE = 'What is the result of the expression?'
+GAME_MESSAGE = 'Find the greatest common divisor of given numbers'
 MIN_NUMBER = 1
-MAX_NUMBER = 30
+MAX_NUMBER = 10
 
 
 def game_settings():
@@ -11,4 +11,4 @@ def game_settings():
     second_random = randint(MIN_NUMBER, MAX_NUMBER)
     divisor = gcd(first_random, second_random)
     question = f"Question: {first_random} {second_random}"
-    return str(divisor), question
+    return question, str(divisor)
