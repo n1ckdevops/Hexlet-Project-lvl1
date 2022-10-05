@@ -1,6 +1,6 @@
 from random import randint, choice
 
-GAME_MESSAGE = 'Answer "yes" if the number is even, otherwise answer "no".'
+GAME_MESSAGE = 'What is the result of the expression?'
 MIN_NUMBER = 1
 MAX_NUMBER = 10
 OPERATORS = ["+", "-", "*"]
