@@ -7,9 +7,7 @@ OPERATORS = ["+", "-", "*"]
 
 
 def game_settings() -> tuple:
-    """
-    - return question and correct answer
-    """
+
     first_number = randint(MIN_NUMBER, MAX_NUMBER)
     second_number = randint(MIN_NUMBER, MAX_NUMBER)
     operator = choice(OPERATORS)

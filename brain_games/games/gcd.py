@@ -7,9 +7,6 @@ MAX_NUMBER = 30
 
 
 def game_settings():
-    """
-    :return: question and correct answer
-    """
     first_random = randint(MIN_NUMBER, MAX_NUMBER)
     second_random = randint(MIN_NUMBER, MAX_NUMBER)
     divisor = gcd(first_random, second_random)

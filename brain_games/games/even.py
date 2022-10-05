@@ -6,18 +6,14 @@ MAX_NUMBER = 50
 
 
 def is_even(number: int) -> bool:
-    """
-    - return True if the number is even, else False
-    """
+
     if number % 2 == 0:
         return True
     return False
 
 
 def game_settings():
-    """
-    - return question and correct answer
-    """
+
     random_number = random.randint(MIN_NUMBER, MAX_NUMBER)
     question: str = f"Question: {random_number}"
     if is_even(random_number):

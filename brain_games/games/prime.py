@@ -17,9 +17,6 @@ def is_prime(number):
 
 
 def game_settings():
-    """
-    : return question and correct answer
-    """
     random_number: int = randint(MIN_NUMBER, MAX_NUMBER)
     question: str = f"Question: {random_number}"
     if is_prime(random_number):
