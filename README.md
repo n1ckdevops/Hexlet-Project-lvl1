@@ -1,3 +1,8 @@
+# Brain Games
+___
+
+The training project "Brain Games" on the Python Development course on [Hexlet.io](https://ru.hexlet.io/programs/python).
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/n1ckdevops/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/n1ckdevops/python-project-49/actions)
 <a href="https://codeclimate.com/github/n1ckdevops/python-project-49/maintainability"><img src="https://api.codeclimate.com/v1/badges/4e0855d692ac8e65c6a3/maintainability" /></a>
@@ -59,3 +64,8 @@ BRAIN-PROGRESSION <a href="https://asciinema.org/a/522416" target="_blank"><img 
 
 BRAIN-PRIME <a href="https://asciinema.org/a/523394" target="_blank"><img src="https://asciinema.org/a/523394.svg" /></a>
 
+___
+
+**Thanks and keep up, bruh!**
+
+:man_technologist: Author: [@n1ckdevops](https://github.com/n1ckdevops)
